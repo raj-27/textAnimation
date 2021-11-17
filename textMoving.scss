@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #012c50;
+    .txtAnimation {
+        overflow: hidden;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #fff;
+        margin: auto 1rem;
+        .movingTxt {
+            display: inline-block;
+            height: 40px;
+            // border: 2px solid;
+            color: #b9f1da;
+            overflow: hidden;
+            span {
+                display: inline-block;
+                animation: moving 8s ease-in-out infinite;
+            }
+            @keyframes moving {
+                0% {
+                    transform: translateY(0);
+                }
+                25% {
+                    transform: translateY(-26%);
+                }
+                50% {
+                    transform: translateY(-51%);
+                }
+                75% {
+                    transform: translateY(-76%);
+                }
+                100% {
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+}
