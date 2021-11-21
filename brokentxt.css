@@ -1,0 +1,50 @@
+.section1 {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section1 h1 {
+  font-size: 4rem;
+  color: transparent;
+  position: relative;
+}
+
+.section1 h1::before {
+  -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.section1 h1::after {
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+.section1 h1::before, .section1 h1::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #c0392b;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+
+.section1 h1:hover::before {
+  -webkit-transform: translateX(-1rem);
+          transform: translateX(-1rem);
+}
+
+.section1 h1:hover::after {
+  -webkit-transform: translateX(1rem);
+          transform: translateX(1rem);
+}
+/*# sourceMappingURL=brokentxt.css.map */
